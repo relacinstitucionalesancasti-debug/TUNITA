@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Aguada - Parque Arqueológico La Tunita</title>
+    <style>
+        :root {
+            --primary-color: #1b3b2b; /* Verde institucional profundo */
+            --accent-color: #c29b61;  /* Tono tierra / oro rústico */
+            --bg-color: #fcfbf9;      /* Fondo tipo papel institucional */
+            --card-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --border-color: #e2ded4;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #000000;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .page-wrapper {
+            background-color: var(--bg-color);
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            min-height: 100vh;
+        }
+
+        .institucional-bar {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .subtitle-top {
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .content-container {
+            width: 85%;
+            max-width: 900px;
+            margin-bottom: 40px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .content-container h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-top: 35px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .content-container h3:first-child {
+            margin-top: 0;
+        }
+
+        .content-container p {
+            line-height: 1.8;
+            color: #444;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #f4f1ea;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-style: italic;
+            color: #333;
+            text-align: left;
+        }
+
+        .back-container {
+            width: 85%;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+
+        footer {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                box-shadow: none;
+            }
+            .content-container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="institucional-bar">
+            Sitio Oficial de Información y Turismo
+        </div>
+
+        <header>
+            <p class="subtitle-top">Parque Arqueológico La Tunita</p>
+            <h1>Cultura Aguada: Tratado Integral de Vida, Arte y Sociedad</h1>
+        </header>
+
+        <div class="back-container">
+            <a href="index.html" class="back-btn">&larr; Volver al Inicio</a>
+        </div>
+
+        <div class="content-container">
+            <h3>Historiografía y Construcción del Concepto</h3>
+            <p>
+                La comprensión científica del fenómeno Aguada ha transitado por una prolongada y compleja trayectoria historiográfica desde finales del siglo XIX. En una etapa pionera, Samuel Lafone Quevedo analizó los primeros hallazgos cerámicos procedentes de Andalgalá, bautizándolos bajo la denominación de "alfarería draconiana" debido a su particular interpretación de las figuras mitológicas como dragones o medusas. Con el correr de las décadas, investigadores como Salvador Debenedetti y Eduardo Casanova propusieron el marco de la "Cultura de los Barreales", vinculando los hallazgos a suelos erosionados y subrayando nexos estilísticos con las altas culturas andinas como Tiwanaku. No obstante, fue a mediados del siglo XX cuando Alberto Rex González sentó las bases metodológicas modernas mediante el análisis estratigráfico sistemático, el uso pionero de dataciones radiocarbónicas y la célebre seriación de las tumbas del valle de Hualfín, caracterizando formalmente a "La Cultura de la Aguada en el Noroeste Argentino".
+            </p>
+
+            <h3>Integración Regional y Dinámicas Socioculturales</h3>
+            <p>
+                A partir del retorno de la democracia en los años ochenta y el incremento masivo de datos empíricos, la arqueología replanteó profundamente los modelos interpretativos previos. Investigadores como Víctor Núñez Regueiro, Osvaldo Heredia y José Pérez Gollán propusieron conceptualizar este período bajo la categoría de <strong>Período de Integración Regional</strong>. Bajo esta perspectiva, Aguada no constituye un imperio homogéneo ni una única etnia expandida coercitivamente, sino una vasta red de interacción entre poblaciones de diversos orígenes del Formativo Inferior que compartieron un densísimo capital simbólico y superestructural. Cada ámbito geográfico —desde los valles occidentales hasta los bosques orientales de Ancasti y Ambato— reinterpretó este sustrato común de acuerdo con su propia trayectoria histórica y social.
+            </p>
+
+            <div class="highlight-box">
+                <p>
+                    "Aguada no es una cultura que se implanta sobre un área extensa, sino la manifestación de una integración regional resultante de la interacción de culturas del Formativo Inferior de distinto origen, que alcanzan a tener un denominador común al nivel de la superestructura..." — <em>Inés Gordillo (Comp., 2018)</em>.
+                </p>
+            </div>
+
+            <h3>Cronología Absoluta y Profundidad Temporal</h3>
+            <p>
+                La revisión crítica de las series de dataciones radiocarbónicas obtenidas en las últimas décadas ha modificado sustancialmente los límites temporales asignados a estas sociedades. Actualmente, la evidencia instrumental ubica el desarrollo pleno de las poblaciones Aguada desde aproximadamente el 600 d.C., extendiéndose de manera sostenida a lo largo del primer milenio e ingresando firmemente en el segundo milenio de la Era Cristiana, con procesos de reorganización o abandono que convergen hacia el 1100 y 1300 d.C. Esta cronología demuestra una marcada contemporaneidad sincrónica entre las distintas localidades regionales, solapándose parcialmente con el advenimiento de los Períodos de Desarrollos Regionales en el NOA.
+            </p>
+
+            <h3>Organización Sociopolítica: ¿Jefaturas o Heterarquía?</h3>
+            <p>
+                Uno de los debates teóricos más estimulantes en la arqueología contemporánea gira en torno a la naturaleza de la organización sociopolítica de Aguada. Mientras que los modelos tradicionales sostuvieron la emergencia de jefaturas complejas o señoríos fuertemente jerarquizados con concentración hereditaria del poder, las investigaciones detalladas en los valles orientales y de Ambato abren paso a modelos alternativos. Diversos especialistas sugieren que estas sociedades operaron bajo lógicas heterárquicas, caracterizadas por una coordinación descentralizada y una toma de decisiones negociada entre instituciones locales, donde los lazos de reciprocidad, parentesco y cooperación mutua predominaban sobre la dominación coercitiva.
+            </p>
+
+            <h3>Chamanismo, Psicotrópicos y el Imaginario Felino</h3>
+            <p>
+                La manifestación más elocuente de las sociedades Aguada reside en su imponente iconografía chamánica y religiosa. En los grabados rupestres y en las piezas de alfarería fina dominan las representaciones felino-antropomórficas, seres fantásticos y personajes ataviados con complejas máscaras y tocados. Este lenguaje visual materializa un universo mítico íntimamente vinculado con las prácticas chamánicas de transformación y trance. El consumo ritual de sustancias alucinógenas —especialmente alcaloides derivados de las semillas del cebil (*Anadenanthera colubrina*), abundantes en los bosques nativos de las laderas orientales de Ancasti— permitía a los intermediarios rituales mimetizarse con el poder del jaguar, legitimando las jerarquías sociales, la administración de recursos y la cohesión ideológica de la comunidad.
+            </p>
+
+            <h3>Maestría Tecnológica y Estilística Alfarera</h3>
+            <p>
+                El registro material evidencia un grado extraordinario de estandarización y especialización artesanal. La alfarería se articula en estilos de altísima fineza técnica, destacando el <strong>Gris Grabado</strong> —cerámica cocida en atmósfera reductora, con paredes sumamente delgadas y pulidos lustrosos ornamentados con paneles geométricos y zoomorfos—, así como los estilos en <strong>Negro Grabado</strong> y las modalidades pintadas bicolores y tricolores. Estos bienes muebles no cumplían meramente funciones domésticas, sino que funcionaban como artefactos político-rituales de circulación restringida encargados de reproducir el canon ideológico en toda la región.
+            </p>
+
+            <h3>Arquitectura, Urbanismo y Paisajes Sagrados</h3>
+            <p>
+                A diferencia de los valles occidentales volcados predominantemente hacia complejos funerarios monumentales, el territorio oriental de Ambato y Ancasti despliega un patrón de asentamiento residencial y ceremonial profundamente integrado a la topografía selvática. Los poblados agrupan recintos de robustos muros dobles de piedra y tapia organizados en torno a grandes patios con galerías, estructurando espacios públicos y domésticos donde la vida cotidiana, las ofrendas rituales, los entierros y el arte rupestre de los aleros conformaban un paisaje sagrado inquebrantable.
+            </p>
+        </div>
+
+        <footer>
+            Municipalidad de Ancasti
+        </footer>
+
+    </div>
+
+</body>
+</html>

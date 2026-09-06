@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliografía e Investigación - Parque Arqueológico La Tunita</title>
+    <style>
+        :root {
+            --primary-color: #1b3b2b; /* Verde institucional profundo */
+            --accent-color: #c29b61;  /* Tono tierra / oro rústico */
+            --bg-color: #fcfbf9;      /* Fondo tipo papel institucional */
+            --card-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --border-color: #e2ded4;
+        }
+
+        /* El cuerpo ocupa toda la pantalla con fondo oscuro para las franjas laterales */
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #000000;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor central que simula el marco principal de la web */
+        .page-wrapper {
+            background-color: var(--bg-color);
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            min-height: 100vh;
+        }
+
+        /* Barra superior institucional */
+        .institucional-bar {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .subtitle-top {
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Contenedor del contenido principal */
+        .content-container {
+            width: 85%;
+            max-width: 900px;
+            margin-bottom: 40px;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Estilo para las tarjetas de documentos */
+        .doc-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--accent-color);
+            border-radius: 6px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease;
+        }
+
+        .doc-card:hover {
+            transform: translateX(3px);
+        }
+
+        .doc-info h3 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .doc-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Botón de acceso al PDF */
+        .pdf-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            transition: background-color 0.2s;
+        }
+
+        .pdf-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Botón de volver al inicio */
+        .back-container {
+            width: 85%;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+
+        /* Pie de página */
+        footer {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-wrapper {
+                box-shadow: none;
+            }
+            .doc-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .pdf-btn {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="institucional-bar">
+            Sitio Oficial de Información y Turismo
+        </div>
+
+        <header>
+            <p class="subtitle-top">Parque Arqueológico La Tunita</p>
+            <h1>Bibliografía e Investigación</h1>
+        </header>
+
+        <div class="back-container">
+            <a href="index.html" class="back-btn">&larr; Volver al Inicio</a>
+        </div>
+
+        <div class="content-container">
+            <p class="intro-text">
+                Acceda a los documentos académicos, publicaciones científicas e investigaciones de referencia sobre el patrimonio arqueológico, el arte rupestre y las sociedades de la región.
+            </p>
+
+            <!-- Documento 1 -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h3>Documento de Investigación I</h3>
+                    <p>Archivo bibliográfico oficial alojado en repositorio digital.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1CSX5LtFct3vXu1c-67ilbUbuypZZpZ7s/view?usp=sharing" target="_blank" class="pdf-btn">Ver / Descargar PDF</a>
+            </div>
+
+            <!-- Documento 2 -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h3>Documento de Investigación II</h3>
+                    <p>Archivo bibliográfico oficial alojado en repositorio digital.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1GMlLrcCzafjiciAZ5OioDoFTsi6sNS2g/view?usp=sharing" target="_blank" class="pdf-btn">Ver / Descargar PDF</a>
+            </div>
+
+            <!-- Documento 3 -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h3>Documento de Investigación III</h3>
+                    <p>Archivo bibliográfico oficial alojado en repositorio digital.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1LcujWVlDk1c3fbtjN4EzzJsVjG5ylANG/view?usp=sharing" target="_blank" class="pdf-btn">Ver / Descargar PDF</a>
+            </div>
+
+            <!-- Documento 4 -->
+            <div class="doc-card">
+                <div class="doc-info">
+                    <h3>Documento de Investigación IV</h3>
+                    <p>Archivo bibliográfico oficial alojado en repositorio digital.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1T-0xu3I9deGCF4py8PuqFUSgztaAWQQS/view?usp=sharing" target="_blank" class="pdf-btn">Ver / Descargar PDF</a>
+            </div>
+
+        </div>
+
+        <footer>
+            Municipalidad de Ancasti
+        </footer>
+
+    </div>
+
+</body>
+</html>
