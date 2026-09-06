@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alojamientos - Parque Arqueológico La Tunita</title>
+    <style>
+        :root {
+            --primary-color: #1b3b2b; /* Verde institucional profundo */
+            --accent-color: #c29b61;  /* Tono tierra / oro rústico */
+            --bg-color: #fcfbf9;      /* Fondo tipo papel institucional */
+            --card-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --border-color: #e2ded4;
+            --whatsapp-color: #25d366; /* Verde oficial de WhatsApp */
+            --booking-color: #003580;  /* Azul oficial de Booking */
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #000000;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .page-wrapper {
+            background-color: var(--bg-color);
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            min-height: 100vh;
+        }
+
+        .institucional-bar {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .subtitle-top {
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .content-container {
+            width: 85%;
+            max-width: 900px;
+            margin-bottom: 40px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .content-container h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-top: 35px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .content-container h3:first-child {
+            margin-top: 0;
+        }
+
+        .content-container > p {
+            line-height: 1.8;
+            color: #444;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .accommodation-card {
+            background-color: #f8f6f0;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            display: grid;
+            grid-template-columns: 1fr 260px; /* Texto a la izquierda, imagen a la derecha */
+            gap: 25px;
+            align-items: center;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .accommodation-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .accommodation-card p {
+            margin-bottom: 8px;
+            text-align: justify; /* Texto de la tarjeta completamente justificado */
+        }
+
+        .accommodation-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .whatsapp-small-btn, .booking-small-btn {
+            display: inline-block;
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .whatsapp-small-btn {
+            background-color: var(--whatsapp-color);
+        }
+
+        .booking-small-btn {
+            background-color: var(--booking-color);
+        }
+
+        .whatsapp-small-btn:hover, .booking-small-btn:hover {
+            opacity: 0.9;
+        }
+
+        .back-container {
+            width: 85%;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent-color);
+        }
+
+        footer {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                box-shadow: none;
+            }
+            .content-container {
+                width: 90%;
+                padding: 20px;
+            }
+            .accommodation-card {
+                grid-template-columns: 1fr; /* Se apila en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="institucional-bar">
+            Sitio Oficial de Información y Turismo
+        </div>
+
+        <header>
+            <p class="subtitle-top">Parque Arqueológico La Tunita</p>
+            <h1>Opciones de Alojamiento</h1>
+        </header>
+
+        <div class="back-container">
+            <a href="index.html" class="back-btn">&larr; Volver al Inicio</a>
+        </div>
+
+        <div class="content-container">
+            <h3>Dónde Hospedarse en la Región</h3>
+            <p>
+                Para planificar su estadía y disfrutar de las excursiones al Parque Arqueológico La Tunita, la zona cuenta con alternativas de hospedaje ubicadas en las localidades cercanas de Ancasti y Anquincila, ofreciendo comodidad y un entorno natural propicio para el descanso.
+            </p>
+
+            <!-- 1. Hostería Municipal de Ancasti (12 km - Más cercana) -->
+            <div class="accommodation-card">
+                <div class="card-info">
+                    <h4>Hostería Municipal de Ancasti</h4>
+                    <p><strong>Ubicación:</strong> Localidad de Ancasti (a 12 kilómetros del parque).</p>
+                    <p><strong>Descripción:</strong> Establecimiento oficial municipal, punto estratégico de referencia donde también se realizan las gestiones logísticas y el retiro de entradas para las visitas al parque.</p>
+                    <div class="button-group">
+                        <a href="https://wa.me/5493834696070?text=Hola,%20deseo%20consultar%20por%20disponibilidad%20y%20alojamiento%20en%20la%20Hostería%20de%20Ancasti." target="_blank" class="whatsapp-small-btn">💬 Reservar por WhatsApp</a>
+                    </div>
+                </div>
+                <img src="img/hosteria-ancasti.jpg" alt="Hostería Municipal de Ancasti" class="accommodation-img">
+            </div>
+
+            <!-- 2. Hostería Municipal de Anquincila (21 km) -->
+            <div class="accommodation-card">
+                <div class="card-info">
+                    <h4>Hostería Municipal de Anquincila</h4>
+                    <p><strong>Ubicación:</strong> Localidad de Anquincila (a 21 kilómetros del parque).</p>
+                    <p><strong>Descripción:</strong> Espacio de alojamiento municipal acondicionado para recibir a los visitantes que recorren las sierras orientales de Ancasti.</p>
+                    <div class="button-group">
+                        <a href="https://wa.me/5493834341583?text=Hola,%20deseo%20consultar%20por%20disponibilidad%20y%20alojamiento%20en%20la%20Hostería%20de%20Anquincila." target="_blank" class="whatsapp-small-btn">💬 Reservar por WhatsApp</a>
+                        <a href="https://www.booking.com/hotel/ar/hosteria-de-anquincila-anquincila.es.html" target="_blank" class="booking-small-btn"> Reservar en Booking</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Hospedaje Córdoba (21 km) -->
+            <div class="accommodation-card">
+                <div class="card-info">
+                    <h4>Hospedaje Córdoba</h4>
+                    <p><strong>Ubicación:</strong> Localidad de Anquincila (a 21 kilómetros del parque).</p>
+                    <p><strong>Descripción:</strong> Alternativa de hospedaje particular ideal para quienes buscan una experiencia de descanso tradicional en la localidad.</p>
+                    <div class="button-group">
+                        <a href="https://wa.me/5493834360268?text=Hola,%20deseo%20consultar%20por%20disponibilidad%20y%20alojamiento%20en%20Hospedaje%20Córdoba." target="_blank" class="whatsapp-small-btn">💬 Reservar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Hostal Posta de los Sauces (24 km) -->
+            <div class="accommodation-card">
+                <div class="card-info">
+                    <h4>Hostal Posta de los Sauces</h4>
+                    <p><strong>Ubicación:</strong> Localidad de Anquincila de Abajo (a 24 kilómetros del parque).</p>
+                    <p><strong>Descripción:</strong> Opción de alojamiento de cálida atención ideal para disfrutar de la tranquilidad y el paisaje característico de las sierras de la región.</p>
+                    <div class="button-group">
+                        <a href="https://wa.me/5493834324358?text=Hola,%20deseo%20consultar%20por%20disponibilidad%20y%20alojamiento%20en%20Hostal%20Posta%20de%20los%20Sauces." target="_blank" class="whatsapp-small-btn">💬 Reservar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            Municipalidad de Ancasti
+        </footer>
+
+    </div>
+
+</body>
+</html>
